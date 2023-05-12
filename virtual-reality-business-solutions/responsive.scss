@@ -58,6 +58,17 @@
   .team {
     grid-template-columns: repeat(2, 1fr);
   }
+  .footer_content-wrapper {
+    @include flex($gap:20px,$direction:column,$align:center, $justify:center);
+  }
+  .footer_main-information {
+    @include flex($gap:15px,$direction:row,$align:center, $justify:center);
+    flex-wrap: wrap;
+  }
+  .footer_links {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+  }
 }
 @media (max-width:760px){
   header{
@@ -104,5 +115,8 @@
   }
   input{
     width: 90%;
+  }
+  .footer-copyright_content-wrapper{
+    @include flex($gap:0,$direction:column,$align:center, $justify:center);
   }
 }
