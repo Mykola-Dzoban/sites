@@ -1,0 +1,76 @@
+@mixin font-style($weight:400, $size:18px, $line-height:24px, $color: #ffffff){
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+@mixin flex($gap:10px,$direction:row,$align:center, $justify:center){
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+@mixin button($padding: 12px, $width:132px){
+  padding: $padding 0;
+  width: $width;
+}
+
+
+@media (max-width:1170px) {
+  .container{
+    width: 100%;
+    margin: 0;
+  }
+  .main-section_content-wrapper{
+    @include flex($gap:20px,$direction:column,$align:center, $justify:center);
+  }
+  .main-section_text{
+    width: 90%;
+    @include flex($gap:0px,$direction:column,$align:center, $justify:center);
+  }
+  .main-section_text p{
+    text-align: center;
+  }
+  .main-section_photo{
+    width: 100%;
+    @include flex($gap:0px,$direction:column,$align:center, $justify:center);
+  }
+  .service_points{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width:760px){
+  header{
+    padding: 20px 0;
+  }
+  .header_content_wrapper{
+    @include flex($gap:20px,$direction:column,$align:center, $justify:center);
+  }
+  nav ul{
+    @include flex($gap:30px,$direction:row,$align:center, $justify:space-between);
+  }
+  nav{
+    @include flex($gap:30px,$direction:column,$align:center, $justify:center);
+  }
+  nav ul li a{
+    @include font-style(500, 14px, 18px, #F9FAFB);
+  }
+  nav button{
+    @include button();
+  }
+  .logo a{
+    width: fit-content;
+    @include flex($gap:7.75px);
+  }
+  .logo_text{
+    font-family: 'Rubik', sans-serif;
+    @include font-style(500, 20px);
+  }
+  .logo a:hover{
+    text-decoration: none;
+  }
+  .service_points{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
