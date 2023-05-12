@@ -1,0 +1,148 @@
+
+@import url('https://fonts.cdnfonts.com/css/rubik');
+@import url('https://fonts.cdnfonts.com/css/dm-sans');
+
+*{
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  color: #ffffff;
+  font-style: normal;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover{
+  text-decoration: underline;
+}
+ul{
+  padding-inline-start: 0;
+}
+ul li{
+  list-style: none;
+}
+button{
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(90.35deg, #2563EB 0.36%, #D946EF 201.02%);
+  border-radius: 5px;
+  color: #F9FAFB;
+}
+
+@mixin font-style($weight:400, $size:18px, $line-height:24px, $color: #ffffff){
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+@mixin flex($gap:10px,$direction:row,$align:center, $justify:center){
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+@mixin button($padding: 12px, $width:132px){
+  padding: $padding 0;
+  width: $width;
+}
+
+body{
+  background: #111827;
+}
+/* Header */
+header{
+  padding: 40px 0;
+}
+.header_content_wrapper{
+  @include flex($gap:0,$direction:row,$align:center, $justify:space-between);
+}
+nav, nav ul{
+  @include flex($gap:60px,$direction:row,$align:center, $justify:space-between);
+}
+nav ul li a{
+  @include font-style(500, 14px, 18px, #F9FAFB);
+}
+nav button{
+  @include button();
+}
+.logo a{
+  width: fit-content;
+  @include flex($gap:7.75px);
+}
+.logo_text{
+  font-family: 'Rubik', sans-serif;
+  @include font-style(500, 20px);
+}
+.logo a:hover{
+  text-decoration: none;
+}
+/* Main section */
+h1{
+  @include font-style(700, 3.625rem, 5.25rem);
+  letter-spacing: 0.02em;
+  background: linear-gradient(89.83deg, #2563EB 0.11%, #D946EF 58.65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+}
+.main-section_content-wrapper{
+  padding-bottom: 66px;
+  @include flex($gap:0,$direction:row,$align:center, $justify:space-between);
+}
+.main-section_text{
+  width: 50%;
+  @include flex($gap:30px,$direction:column,$align:flex-start, $justify:center);
+
+}
+.main-section_text p{
+  @include font-style(500, 15px, 30px,#E5E7EB);
+  opacity: 0.8;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+}
+.main-section_photo{
+  width: 50%;
+  
+}
+.main-section_photo img{
+  max-width: 100%;
+  // background: #fff;
+}
+.main-buttons{
+  @include flex($gap:20px,$direction:row,$align:center, $justify:center);
+
+}
+.main-buttons button:nth-child(1){
+  @include button(20px,135px);
+  @include font-style(500, 16px, 21px,#F9FAFB);
+}
+.watch_video_button{
+  @include font-style(500, 16px, 21px,#F9FAFB);
+  background: transparent;
+  @include button(20px,fit-content);
+  @include flex($gap:20px,$direction:row,$align:center, $justify:center);
+}
+.watch_video_button:hover .play{
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+@media screen (max-width:1170px) {
+  
+}
