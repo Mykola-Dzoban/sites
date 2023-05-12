@@ -55,6 +55,9 @@
     width: 80%;
     // background: #fff;
   }
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width:760px){
   header{
@@ -89,5 +92,7 @@
   .service_points{
     grid-template-columns: repeat(1, 1fr);
   }
-  
+  .team {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

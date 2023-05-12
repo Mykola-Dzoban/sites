@@ -179,16 +179,16 @@ h1{
 }
 .service_point img{
   position: relative;
-  animation: point infinite ease-in-out 2s;
-  -webkit-animation: point infinite ease-in-out 2s;
+  animation: up-down infinite ease-in-out 2s;
+  -webkit-animation: up-down infinite ease-in-out 2s;
 }
 .service_point:nth-child(2n) img{
-  animation: point infinite ease-in-out 2.5s;
-  -webkit-animation: point infinite ease-in-out 2.5s;
+  animation: up-down infinite ease-in-out 2.5s;
+  -webkit-animation: up-down infinite ease-in-out 2.5s;
 }
 .service_point:nth-child(3n) img{
-  animation: point infinite ease-in-out 3s;
-  -webkit-animation: point infinite ease-in-out 3s;
+  animation: up-down infinite ease-in-out 3s;
+  -webkit-animation: up-down infinite ease-in-out 3s;
 }
 .service_point h3{
   @include font-style(500, 24px, 31px,#ffffff);
@@ -218,7 +218,7 @@ h1{
     left: 0;
   }
 }
-@keyframes point {
+@keyframes up-down {
   0% {
     top: 0;
   }
@@ -258,14 +258,74 @@ h1{
 }
 /* Team section */
 .team_content-wrapper {
+  padding: 60px 0;
+  @include flex($gap:35px,$direction:column,$align:center, $justify:center);
+}
+.team_content-wrapper h2{
+  @include font-style(700, 42px, 55px,#fff);
+
+}
+.team_content-wrapper p{
+  @include font-style(400, 16px, 21px,#fff);
+  max-width: 480px;
+  text-align: center;
 }
 .team {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px 30px;
 }
 .team_member {
+  padding: 33px 0;
+  border: 1px solid #403e4693;
+  background: linear-gradient(268.12deg, rgba(254, 254, 255, 0.032) -11.04%, rgba(255, 255, 255, 0.018) 104.89%);
+  box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+  @include flex($gap:10px,$direction:column,$align:center, $justify:center);
+}
+.team_member img{
+  box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+  transform: rotate(-4.08deg);
 }
 .team-member_name {
+  @include font-style(500, 28px, 36px,#fff);
 }
 .team-member_position {
+  @include font-style(400, 16px, 21px, #fff);
+  letter-spacing: 0.03em;
 }
 .social_medias {
+  @include flex($gap:12px,$direction:row,$align:center, $justify:center);
+}
+.social_medias svg{
+  cursor: pointer;
+  position: relative;
+  animation: up-down infinite ease-in-out 2s;
+  -webkit-animation: up-down infinite ease-in-out 2s;
+}
+.social_medias svg:nth-child(2){
+  animation: up-down infinite ease-in-out 2.5s;
+  -webkit-animation: up-down infinite ease-in-out 2.5s;
+}
+.social_medias svg:nth-child(3){
+  animation: up-down infinite ease-in-out 3s;
+  -webkit-animation: up-down infinite ease-in-out 3s;
+}
+.social_medias svg:nth-child(4){
+  animation: up-down infinite ease-in-out 3.5s;
+  -webkit-animation: up-down infinite ease-in-out 3.5s;
+}
+.social_medias svg:hover{
+  animation: none;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -webkit-animation: none;
 }
