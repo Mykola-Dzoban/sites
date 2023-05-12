@@ -39,6 +39,22 @@
   .service_points{
     grid-template-columns: repeat(2, 1fr);
   }
+  .complete-project,.complete-project:nth-child(2) {
+    @include flex($gap:20px,$direction:column,$align:center, $justify:center);
+  }
+  .project-text {
+    @include flex($gap:30px,$direction:column,$align:center, $justify:center);
+  }
+  .project-text h2, .project-text p{
+    text-align: center;
+  }
+  .complete-project img{
+    width: 80%;
+  }
+  .main-section_photo img{
+    width: 80%;
+    // background: #fff;
+  }
 }
 @media (max-width:760px){
   header{
@@ -73,4 +89,5 @@
   .service_points{
     grid-template-columns: repeat(1, 1fr);
   }
+  
 }

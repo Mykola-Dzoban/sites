@@ -229,3 +229,43 @@ h1{
     top: 0;
   }
 }
+/* Project section */
+.complete_content-wrapper {
+  padding: 60px 0;
+}
+.complete-project {
+  @include flex($gap:0,$direction:row,$align:center, $justify:space-between);
+}
+.complete-project:nth-child(2) {
+  @include flex($gap:0,$direction:row-reverse,$align:center, $justify:space-between);
+}
+.project-text {
+  @include flex($gap:30px,$direction:column,$align:flex-start, $justify:center);
+
+}
+.project-text h2{
+  @include font-style(700, 42px, 55px,#fff);
+
+}
+.project-text p{
+  @include font-style(400, 16px, 26px,#fff);
+
+}
+.project-text button{
+  @include button(7px,99px);
+  @include font-style(400, 14px, 18px,#fff);
+
+}
+/* Team section */
+.team_content-wrapper {
+}
+.team {
+}
+.team_member {
+}
+.team-member_name {
+}
+.team-member_position {
+}
+.social_medias {
+}
